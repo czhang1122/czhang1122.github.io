@@ -760,7 +760,7 @@ footer {
 <!-- ── SIDEBAR ── -->
 <aside>
   <div>
-    <p class="nav-brand">Christopher<br>Merone</p>
+    <p class="nav-brand">Christopher<br>Zhang</p>
     <p class="nav-title">// Mechanical Engineer</p>
     <nav>
       <ul>
@@ -776,7 +776,7 @@ footer {
   <div class="nav-social">
     <a href="mailto:your@email.com">your@email.com</a>
     <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
-    <a class="resume-btn" href="resume.pdf" download="Christopher_Merone_Resume.pdf" style="margin-top:1rem;">
+    <a class="resume-btn" href="resume.pdf" download="Christopher_Zhang_Resume.pdf" style="margin-top:1rem;">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
       Resume
     </a>
@@ -790,7 +790,7 @@ footer {
 <section id="hero">
   <div class="hero-top">
     <p class="terminal-line">MS Mechanical Engineering · Northeastern University · 2026</p>
-    <h1 class="hero-name">Christopher<br>Merone</h1>
+    <h1 class="hero-name">Christopher<br>Zhang</h1>
     <p class="hero-role">// Mechatronics & Electromechanical Systems</p>
     <p class="hero-bio">
       I build things that <strong>move, measure, and perform</strong>. From commissioned energy systems in the field to feedback-controlled power electronics on the bench — I work across the full stack of mechanical engineering: sketch to CAD, prototype to validation. Based in <strong>Greater Boston</strong>, open to roles in medical devices, semiconductor equipment, defense, and EV technology.
@@ -821,7 +821,7 @@ footer {
   <p class="section-label">// 01 — About Me</p>
   <div class="about-grid">
     <div>
-      <p>Hi! My name is <strong>Christopher Merone</strong> and I am a mechatronics-focused mechanical engineer who recently completed my <strong>MS in Mechanical Engineering at Northeastern University</strong> (May 2026). I've designed, prototyped, and built hardware across contexts ranging from energy commissioning in the field to electromechanical systems on the bench.</p>
+      <p>Hi! My name is <strong>Christopher Zhang</strong> and I am a mechatronics-focused mechanical engineer who recently completed my <strong>MS in Mechanical Engineering at Northeastern University</strong> (May 2026). I've designed, prototyped, and built hardware across contexts ranging from energy commissioning in the field to electromechanical systems on the bench.</p>
       <p>My engineering interests sit at the intersection of <strong>mechanisms, controls, and instrumentation</strong> — I'm drawn to problems where the physical and electrical worlds meet, and where the answer has to work in the real world, not just in simulation. Whether I'm deriving a transfer function, running FEA on a weldment, or standing on a job site with a P&ID, I close the loop between design intent and built reality.</p>
       <p>Previously, I completed co-ops at <strong>Instron</strong> as an Applications Engineer, working directly with universal testing machines and high-demand industrial clients, and at <strong>ICO Energy & Engineering</strong> as a Commissioning Engineer, executing startup and acceptance testing of industrial energy systems in the field.</p>
       <p>Outside of engineering, I build things in wood — furniture and shop fixtures that demand the same precision as machined parts, just with hand tools and grain direction instead of tolerances and toolpaths.</p>
@@ -1086,7 +1086,7 @@ footer {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           linkedin.com/in/yourprofile
         </a>
-        <a class="contact-link" href="resume.pdf" download="Christopher_Merone_Resume.pdf">
+        <a class="contact-link" href="resume.pdf" download="Christopher_Zhang_Resume.pdf">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
           Download resume — PDF
         </a>
@@ -1133,7 +1133,7 @@ footer {
 <!-- FOOTER -->
 <footer>
   <div>
-    <p class="footer-name">Christopher Merone</p>
+    <p class="footer-name">Christopher Zhang</p>
     <p style="font-family:var(--mono);font-size:0.65rem;color:var(--text3);margin-top:2px;">Mechanical Engineer</p>
   </div>
   <div class="footer-links">
@@ -1143,7 +1143,7 @@ footer {
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
   </div>
-  <p class="footer-copy">© 2026 Christopher Merone</p>
+  <p class="footer-copy">© 2026 Christopher Zhang</p>
 </footer>
 
 </main>
