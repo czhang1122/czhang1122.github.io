@@ -35,8 +35,8 @@
     </nav>
   </div>
   <div class="nav-bottom">
-    <a href="mailto:your@email.com">your@email.com</a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+    <a href="mailto:chriszhang1122@gmail.com">chriszhang1122@gmail.com</a>
+    <a href="https://www.linkedin.com/in/chris-zhang-79618a227/" target="_blank">LinkedIn</a>
     <a class="resume-btn" href="resume.pdf" download="Christopher_Zhang_Resume.pdf">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
       Resume
@@ -277,13 +277,13 @@
       <h2>Let's build<br>something <span>together.</span></h2>
       <p>I'm actively looking for full-time mechanical engineering roles in the Greater Boston area — particularly in medical devices, semiconductor equipment, defense/aerospace, and EV technology. If you're working on hardware that matters, I'd like to hear about it.</p>
       <div class="contact-links">
-        <a class="contact-link" href="mailto:your@email.com">
+        <a class="contact-link" href="mailto:chriszhang1122@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          your@email.com
+          chriszhang1122@gmail.com
         </a>
-        <a class="contact-link" href="https://linkedin.com/in/yourprofile" target="_blank">
+        <a class="contact-link" href="https://www.linkedin.com/in/chris-zhang-79618a227/" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          linkedin.com/in/yourprofile
+          LinkedIn
         </a>
         <a class="contact-link" href="resume.pdf" download="Christopher_Zhang_Resume.pdf">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
@@ -358,7 +358,7 @@ function submitForm() {
     return;
   }
   const sub = document.getElementById('cf-subject').value.trim();
-  window.location.href = `mailto:your@email.com?subject=${encodeURIComponent((sub||'Portfolio contact')+' — '+name)}&body=${encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg)}`;
+  window.location.href = `mailto:chriszhang1122@gmail.com?subject=${encodeURIComponent((sub||'Portfolio contact')+' — '+name)}&body=${encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg)}`;
   document.getElementById('formSuccess').classList.add('visible');
   ['cf-name','cf-company','cf-email','cf-subject','cf-msg'].forEach(id => document.getElementById(id).value = '');
   setTimeout(() => document.getElementById('formSuccess').classList.remove('visible'), 6000);
