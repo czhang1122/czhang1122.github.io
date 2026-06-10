@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soccer Ball Launcher — Christopher Merone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+
+<aside>
+  <div>
+    <a class="nav-brand" href="index.html">Christopher<br>Merone</a>
+    <p class="nav-title">// Mechanical Engineer</p>
+    <nav>
+      <ul>
+        <li><a href="index.html#hero"><span class="nav-num">00</span> Home</a></li>
+        <li><a href="index.html#about"><span class="nav-num">01</span> About</a></li>
+        <li><a href="index.html#experience"><span class="nav-num">02</span> Experience</a></li>
+        <li><a href="index.html#projects"><span class="nav-num">03</span> Projects</a></li>
+        <ul class="nav-projects">
+          <li><a href="project-wheelchair.html">Canine Wheelchair</a></li>
+          <li><a href="project-launcher.html" class="active">Soccer Ball Launcher</a></li>
+          <li><a href="project-buckconverter.html">Buck Converter</a></li>
+          <li><a href="project-woodworking.html">Woodworking</a></li>
+        </ul>
+        <li><a href="index.html#education"><span class="nav-num">04</span> Education</a></li>
+        <li><a href="index.html#contact"><span class="nav-num">05</span> Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="nav-bottom">
+    <a href="mailto:your@email.com">your@email.com</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+    <a class="resume-btn" href="resume.pdf" download="Christopher_Merone_Resume.pdf">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+      Resume
+    </a>
+  </div>
+</aside>
+
+<main>
+  <div class="proj-hero">
+    <a class="proj-back" href="index.html#projects">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      All projects
+    </a>
+    <p class="proj-eyebrow">02 — Capstone · Mechatronics</p>
+    <h1 class="proj-title">Automated Soccer<br>Ball Launcher</h1>
+    <p class="proj-tagline">A full mechatronic system for athletic training — dual counter-rotating flywheels, closed-loop speed control, servo-actuated pitch adjustment, and a gravity-fed hopper. Built from first sketch to field test.</p>
+    <div class="proj-meta-row">
+      <div class="proj-meta-item">
+        <span class="proj-meta-label">Context</span>
+        <span class="proj-meta-value">Senior Capstone</span>
+      </div>
+      <div class="proj-meta-item">
+        <span class="proj-meta-label">Role</span>
+        <span class="proj-meta-value">Mechanical &amp; Controls Lead</span>
+      </div>
+      <div class="proj-meta-item">
+        <span class="proj-meta-label">Tools</span>
+        <span class="proj-meta-value">SolidWorks · Arduino · MATLAB</span>
+      </div>
+      <div class="proj-meta-item">
+        <span class="proj-meta-label">Result</span>
+        <span class="proj-meta-value">±5° repeatability · Field tested</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-body">
+
+    <!-- Hero shot of finished launcher -->
+    <div class="proj-img-full placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:32px;height:32px;opacity:.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      <span>Hero photo of the finished launcher on the field<br><code style="font-size:.6rem;">images/launcher-hero.jpg</code></span>
+    </div>
+
+    <h2 class="proj-h2">The brief</h2>
+    <p class="proj-p">Solo soccer training is limited by the need for a second person to pass or cross the ball. A consistent, programmable launcher removes that dependency — enabling a single player to drill receiving, shooting off crosses, or first-touch repetitions at any time. The system needed to deliver balls repeatably at controlled speed, angle, and spin with minimal setup time.</p>
+
+    <!-- System overview photo pair -->
+    <div class="proj-img-pair">
+      <div class="proj-img-item"><span>System overview / wide shot<br><code style="font-size:.58rem;">images/launcher-overview.jpg</code></span></div>
+      <div class="proj-img-item"><span>Early concept sketch or CAD<br><code style="font-size:.58rem;">images/launcher-sketch.jpg</code></span></div>
+    </div>
+
+    <h2 class="proj-h2">System architecture</h2>
+    <p class="proj-p">The launcher is organized into four subsystems, each designed and validated independently before integration:</p>
+    <ul class="proj-list">
+      <li><strong>Drive mechanism:</strong> Dual counter-rotating flywheels mounted on a common pitch axis. Each wheel is driven by an independent brushless DC motor — differential speed between the two wheels applies top or backspin to the ball at launch.</li>
+      <li><strong>Pitch adjustment:</strong> Servo-actuated tilt mechanism sets launch angle from 5° (ground pass) to 45° (lofted cross). Angle is set via serial command before each drill sequence.</li>
+      <li><strong>Feed system:</strong> Gravity-fed hopper holds up to 8 balls. A servo-driven gate at the hopper exit releases one ball at a time on command, with a 1.5 s minimum inter-ball interval to allow flywheels to return to set speed.</li>
+      <li><strong>Controller:</strong> Arduino Mega with quadrature encoder feedback on each flywheel motor. A PI loop regulates wheel speed to the target RPM within ±3% before allowing ball release.</li>
+    </ul>
+
+    <!-- Full-bleed CAD or system diagram -->
+    <div class="proj-img-full placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:32px;height:32px;opacity:.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      <span>SolidWorks assembly or system block diagram<br><code style="font-size:.6rem;">images/launcher-cad.jpg</code></span>
+    </div>
+    <p class="proj-caption">Full system assembly — flywheel module, pitch servo, hopper gate, and Arduino controller.</p>
+
+    <h2 class="proj-h2">Flywheel mechanism design</h2>
+    <p class="proj-p">The flywheel gap was the critical geometric parameter — too wide and the ball slips through without enough compression force to accelerate; too narrow and the motors stall under the nip load. Using a nip-force model derived from the ball's known compression stiffness (measured with a simple bench fixture), the gap was set to produce approximately <strong>18 N of nip force</strong> at the nominal ball diameter, giving sufficient friction for launch while keeping motor current within the continuous rating.</p>
+    <p class="proj-p">Flywheel mass was sized to store enough rotational kinetic energy that a single ball pass drops wheel speed by less than 5% — keeping consistent exit velocity across the full hopper load without waiting for full speed recovery between shots.</p>
+
+    <div class="proj-pullquote">
+      <p>"Every subsystem works on the bench. Integration is where the real engineering happens — the flywheels, the feeder, and the controller all have to agree on timing."</p>
+    </div>
+
+    <!-- Mechanism close-ups -->
+    <div class="proj-img-pair">
+      <div class="proj-img-item"><span>Flywheel assembly close-up<br><code style="font-size:.58rem;">images/launcher-flywheels.jpg</code></span></div>
+      <div class="proj-img-item"><span>Hopper and gate mechanism<br><code style="font-size:.58rem;">images/launcher-hopper.jpg</code></span></div>
+    </div>
+    <p class="proj-caption">Left: dual flywheel module with gap-adjustment screw. Right: gravity hopper with servo gate.</p>
+
+    <h2 class="proj-h2">Controls &amp; electronics</h2>
+    <p class="proj-p">Each motor is driven by a BLDC ESC receiving PWM from the Arduino. Encoder counts are read via hardware interrupt pins to avoid timing jitter. The PI controller runs at 100 Hz; proportional gain was tuned on the bench to minimize overshoot on speed step commands, with integral gain set to eliminate steady-state error within 0.5 s.</p>
+    <p class="proj-p">The user interface is a simple serial terminal (115200 baud) — commands set target RPM for each wheel, pitch angle, number of balls, and inter-shot interval. A status line streams back actual wheel RPM and gate state at 10 Hz so the operator can confirm the system is ready before stepping back.</p>
+
+    <!-- Wiring / electronics photo -->
+    <div class="proj-img-full placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:32px;height:32px;opacity:.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      <span>Electronics enclosure / wiring photo<br><code style="font-size:.6rem;">images/launcher-electronics.jpg</code></span>
+    </div>
+    <p class="proj-caption">Arduino Mega, ESCs, and encoder wiring inside the launcher frame.</p>
+
+    <!-- Demo video -->
+    <h2 class="proj-h2">System demo</h2>
+    <div class="proj-video">
+      <video controls poster="images/launcher-video-poster.jpg">
+        <source src="videos/launcher-demo.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="video-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        <span>Add launcher demo video here<br><code style="font-size:.6rem;">videos/launcher-demo.mp4</code></span>
+      </div>
+    </div>
+    <p class="proj-caption">Field test — 8-ball sequence at 45 km/h exit velocity with topspin, 20° pitch.</p>
+
+    <!-- Second video: controls / bench test -->
+    <h2 class="proj-h2">Controls bench test</h2>
+    <div class="proj-video">
+      <video controls poster="images/launcher-bench-poster.jpg">
+        <source src="videos/launcher-bench.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="video-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        <span>Add bench test / controls video here<br><code style="font-size:.6rem;">videos/launcher-bench.mp4</code></span>
+      </div>
+    </div>
+    <p class="proj-caption">PI speed controller step response — target RPM set, encoder feedback, gate release timing.</p>
+
+    <h2 class="proj-h2">Field testing &amp; results</h2>
+    <p class="proj-p">Final validation was conducted on a full-size soccer pitch. Key measurements:</p>
+    <ul class="proj-list">
+      <li>Launch angle repeatability: <strong>±5°</strong> across 20 consecutive shots at the same pitch setting</li>
+      <li>Exit velocity range: <strong>20–65 km/h</strong> (ground pass to hard cross) controlled by flywheel RPM setpoint</li>
+      <li>Spin control: three modes (neutral, topspin at +15% differential, backspin at −15% differential) consistently produced measurable ball curve in flight</li>
+      <li>8-ball sequence time: approximately 24 seconds from first shot to last at 3-second intervals</li>
+    </ul>
+
+    <div class="proj-img-trio">
+      <div class="proj-img-item"><span>Field test — ground pass<br><code style="font-size:.55rem;">images/launcher-field1.jpg</code></span></div>
+      <div class="proj-img-item"><span>Field test — lofted cross<br><code style="font-size:.55rem;">images/launcher-field2.jpg</code></span></div>
+      <div class="proj-img-item"><span>Team with final build<br><code style="font-size:.55rem;">images/launcher-team.jpg</code></span></div>
+    </div>
+
+    <h2 class="proj-h2">Outcomes</h2>
+    <div class="proj-stats">
+      <div class="proj-stat"><p class="proj-stat-num">±5°</p><p class="proj-stat-label">Launch angle repeatability</p></div>
+      <div class="proj-stat"><p class="proj-stat-num">3</p><p class="proj-stat-label">Spin modes: neutral, top, back</p></div>
+      <div class="proj-stat"><p class="proj-stat-num">65 km/h</p><p class="proj-stat-label">Maximum exit velocity</p></div>
+      <div class="proj-stat"><p class="proj-stat-num">PI</p><p class="proj-stat-label">Closed-loop speed control with encoder feedback</p></div>
+    </div>
+
+    <h2 class="proj-h2">Skills demonstrated</h2>
+    <div class="proj-tags">
+      <span class="proj-tag">Mechatronic system design</span>
+      <span class="proj-tag">Arduino / embedded C</span>
+      <span class="proj-tag">Closed-loop motor control</span>
+      <span class="proj-tag">SolidWorks</span>
+      <span class="proj-tag">Mechanism design</span>
+      <span class="proj-tag">Electronics integration</span>
+      <span class="proj-tag">Field testing &amp; validation</span>
+      <span class="proj-tag">PI controller tuning</span>
+      <span class="proj-tag">Subsystem integration</span>
+    </div>
+
+    <div class="proj-nav">
+      <a href="project-wheelchair.html">
+        <div>
+          <span class="proj-nav-label">Previous project</span>
+          <span class="proj-nav-title">← Canine Wheelchair</span>
+        </div>
+      </a>
+      <a href="project-buckconverter.html">
+        <div style="text-align:right">
+          <span class="proj-nav-label">Next project</span>
+          <span class="proj-nav-title">Buck Converter →</span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</main>
+</div>
+</body>
+</html>
