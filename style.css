@@ -798,3 +798,69 @@ footer {
   .proj-img-pair, .proj-img-trio { grid-template-columns: 1fr; }
   footer { flex-direction: column; gap: 1rem; padding: 2rem 1.5rem; }
 }
+
+/* ── WORK EXPERIENCE CARDS ── */
+.exp-section-title {
+  font-family: var(--sans);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: 3.5rem;
+}
+
+.exp-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
+  max-width: 720px;
+}
+
+.exp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.exp-logo-box {
+  width: 100%;
+  max-width: 280px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.exp-card-company {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.exp-card-team {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text2);
+}
+
+.exp-card-date {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text2);
+}
