@@ -800,15 +800,6 @@ footer {
 }
 
 /* ── WORK EXPERIENCE CARDS ── */
-.exp-section-title {
-  font-family: var(--sans);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 400;
-  color: var(--text);
-  letter-spacing: -0.01em;
-  margin-bottom: 3.5rem;
-}
-
 .exp-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
