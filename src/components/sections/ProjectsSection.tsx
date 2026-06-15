@@ -86,15 +86,46 @@ export default function ProjectsSection() {
                   border: '1px solid',
                   borderColor: 'divider',
                   borderRadius: 0.5,
+                  overflow: 'hidden',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontFamily: '"Space Mono", monospace',
-                  fontSize: '0.62rem',
-                  color: 'text.disabled',
+                  position: 'relative',
                 }}
               >
-                {project.shortTitle}
+                {project.image ? (
+                  <Box
+                    component="img"
+                    src={project.image}
+                    alt={project.title}
+                    sx={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition:
+                        project.slug === 'launcher'
+                          ? 'center 35%'
+                          : project.slug === 'pinn'
+                            ? 'center 45%'
+                            : project.slug === 'woodworking'
+                              ? 'center 30%'
+                              : 'center',
+                      display: 'block',
+                    }}
+                  />
+                ) : (
+                  <Box
+                    sx={{
+                      fontFamily: '"Space Mono", monospace',
+                      fontSize: '0.62rem',
+                      color: 'text.disabled',
+                      textAlign: 'center',
+                      px: 1,
+                    }}
+                  >
+                    {project.shortTitle}
+                  </Box>
+                )}
               </Box>
 
               <Typography

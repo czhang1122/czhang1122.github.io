@@ -72,7 +72,7 @@ export default function HeroSection() {
         alignItems={{ xs: 'flex-start', sm: 'flex-end' }}
         justifyContent="space-between"
         spacing={3}
-        sx={{ mt: { xs: 5, md: 6 }, pt: 3, borderTop: '1px solid', borderColor: 'divider' }}
+        sx={{ mt: { xs: 5, md: 6 }, pt: 3 }}
       >
         <Typography
           sx={{
@@ -101,11 +101,12 @@ export default function HeroSection() {
           alt={site.name}
           variant="rounded"
           sx={{
-            width: { xs: 96, sm: 120 },
-            height: { xs: 96, sm: 120 },
+            width: { xs: 144, sm: 180 },
+            height: { xs: 144, sm: 180 },
             border: '1px solid',
             borderColor: 'divider',
             bgcolor: 'surface.main',
+            boxShadow: '0 18px 40px rgba(0, 0, 0, 0.18)',
           }}
         />
       </Stack>

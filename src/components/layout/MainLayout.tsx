@@ -17,7 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { NAV_WIDTH } from '../../theme';
 import { navItems, site } from '../../data/portfolio';
 import { projects as projectList } from '../../data/projects';
@@ -72,6 +72,7 @@ function NavLink({
 function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const [projectsOpen, setProjectsOpen] = useState(false);
 
   const handleNav = (id: string) => {
     onNavigate?.();
@@ -114,26 +115,55 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
 
         <List disablePadding>
           {navItems.map((item) => (
-            <NavLink
-              key={item.id}
-              to={isHome ? `#${item.id}` : `/#${item.id}`}
-              num={item.num}
-              label={item.label}
-              onClick={() => handleNav(item.id)}
-            />
+            <Fragment key={item.id}>
+              {item.id === 'projects' ? (
+                <Box
+                  onMouseEnter={() => setProjectsOpen(true)}
+                  onMouseLeave={() => setProjectsOpen(false)}
+                  sx={{ position: 'relative' }}
+                >
+                  <NavLink
+                    to={isHome ? '#projects' : '/#projects'}
+                    num={item.num}
+                    label={item.label}
+                    onClick={() => {
+                      setProjectsOpen(true);
+                      handleNav(item.id);
+                    }}
+                  />
+                  <Box
+                    sx={{
+                      pl: 2,
+                      pb: 0.5,
+                      maxHeight: projectsOpen ? 400 : 0,
+                      overflow: 'hidden',
+                      transition: 'max-height 180ms ease',
+                      opacity: projectsOpen ? 1 : 0,
+                      pointerEvents: projectsOpen ? 'auto' : 'none',
+                    }}
+                  >
+                    {projectList.map((p) => (
+                      <NavLink
+                        key={p.slug}
+                        to={`/projects/${p.slug}`}
+                        label={p.shortTitle}
+                        indent
+                        active={location.pathname === `/projects/${p.slug}`}
+                        onClick={onNavigate}
+                      />
+                    ))}
+                  </Box>
+                </Box>
+              ) : (
+                <NavLink
+                  to={isHome ? `#${item.id}` : `/#${item.id}`}
+                  num={item.num}
+                  label={item.label}
+                  onClick={() => handleNav(item.id)}
+                />
+              )}
+            </Fragment>
           ))}
-          <Box sx={{ pl: 2 }}>
-            {projectList.map((p) => (
-              <NavLink
-                key={p.slug}
-                to={`/projects/${p.slug}`}
-                label={p.shortTitle}
-                indent
-                active={location.pathname === `/projects/${p.slug}`}
-                onClick={onNavigate}
-              />
-            ))}
-          </Box>
         </List>
       </Box>
 

@@ -18,6 +18,7 @@ export interface Project {
   type: string;
   title: string;
   shortTitle: string;
+  image?: string;
   summary: string;
   tagline: string;
   chips: string[];
@@ -34,6 +35,7 @@ export const projects: Project[] = [
     type: 'Design & Prototyping',
     title: 'Canine Rehabilitation Wheelchair',
     shortTitle: 'Canine Wheelchair',
+    image: '/Images/DogWheelchair.JPG',
     summary:
       'Custom mobility aid for dogs with hind-limb paralysis — designed, fabricated, and validated with real veterinary feedback.',
     tagline:
@@ -103,6 +105,7 @@ export const projects: Project[] = [
     type: 'Capstone · Mechatronics',
     title: 'Automated Soccer Ball Launcher',
     shortTitle: 'Soccer Ball Launcher',
+    image: '/Images/SoccerBall_Launcher.jpg',
     summary:
       'Full mechatronic launcher for athletic training — dual flywheels, closed-loop speed control, servo pitch adjustment, and a gravity-fed hopper.',
     tagline:
@@ -171,6 +174,7 @@ export const projects: Project[] = [
     type: 'Graduate Coursework',
     title: 'Buck Converter Feedback Control Design',
     shortTitle: 'Buck Converter',
+    image: '/Images/BuckConverter.png',
     summary:
       'Small-signal modeling, transfer function derivation, and PI controller synthesis for a DC–DC buck converter — verified in LTSpice.',
     tagline:
@@ -234,14 +238,145 @@ export const projects: Project[] = [
       },
     ],
     prevSlug: 'launcher',
+    nextSlug: 'motor-control',
+  },
+  {
+    slug: 'motor-control',
+    num: '04',
+    type: 'Graduate Coursework',
+    title: 'Motor Control Project',
+    shortTitle: 'Motor Control',
+    image: '/Images/MechatronicsProject.png',
+    summary:
+      'Graduate coursework project focused on motor dynamics, controller tuning, and simulation-based validation for electromechanical motion control.',
+    tagline:
+      'A graduate coursework project centered on motor modeling, closed-loop control, and simulation-based validation for an electromechanical system.',
+    chips: ['Motor Control', 'MATLAB', 'Simulink', 'Controls'],
+    meta: [
+      { label: 'Context', value: 'Graduate Coursework' },
+      { label: 'Course', value: 'Controls / Motor Systems' },
+      { label: 'Tools', value: 'MATLAB · Simulink · Control Design' },
+      { label: 'Focus', value: 'Modeling · Tuning · Validation' },
+    ],
+    sections: [
+      {
+        heading: 'Project focus',
+        paragraphs: [
+          'This project explores the core ideas behind motor control: dynamic modeling, controller synthesis, and validation of closed-loop performance for an electromechanical system.',
+          'The goal is to connect theoretical control design with practical implementation considerations such as settling time, overshoot, current limits, and disturbance rejection.',
+        ],
+      },
+      {
+        heading: 'Control approach',
+        paragraphs: [
+          'The work emphasizes deriving an appropriate plant model, selecting a control strategy, and tuning compensator gains to meet transient-response requirements.',
+          'Simulation is used to assess speed regulation, torque behavior, and stability across realistic operating conditions.',
+        ],
+        pullQuote:
+          'The project is designed to show how control theory translates into measurable motor-system performance.',
+      },
+      {
+        heading: 'What this adds to the portfolio',
+        list: [
+          'Demonstrates graduate-level understanding of motor dynamics and feedback control',
+          'Shows the ability to model, simulate, and tune a control system for real hardware behavior',
+          'Strengthens the portfolio with a coursework project that aligns with electromechanics and controls work',
+        ],
+        tags: [
+          'Motor control',
+          'Closed-loop feedback',
+          'Control tuning',
+          'MATLAB',
+          'Simulink',
+          'Electromechanical systems',
+          'Graduate coursework',
+        ],
+      },
+    ],
+    prevSlug: 'buckconverter',
+    nextSlug: 'pinn',
+  },
+  {
+    slug: 'pinn',
+    num: '05',
+    type: 'Graduate Coursework',
+    title: 'PINNs for Charged Particle Trajectory Prediction',
+    shortTitle: 'PINN Trajectory Modeling',
+    image: '/Images/PINNs.png',
+    summary:
+      'A physics-informed neural network that learns charged-particle dynamics from limited trajectory data and uses RK4 for long-horizon extrapolation.',
+    tagline:
+      'A physics-informed neural network trained to predict charged-particle motion under Lorentz-force dynamics, blending data fitting with governing physics and RK4 integration for extrapolation.',
+    chips: ['Python', 'PyTorch', 'PINNs', 'RK4', 'NumPy', 'Matplotlib'],
+    meta: [
+      { label: 'Context', value: 'Graduate Coursework' },
+      { label: 'Course', value: 'ME5510 · Physics-Informed Machine Learning' },
+      { label: 'Tools', value: 'Python · PyTorch · NumPy · Matplotlib' },
+      { label: 'Result', value: 'MSE 1.18e-01 · 10× error reduction' },
+    ],
+    sections: [
+      {
+        heading: 'Overview',
+        paragraphs: [
+          'This project used a physics-informed neural network to estimate the trajectory of a charged particle in a 2D electromagnetic field. The goal was to recover physical parameters such as charge and mass from partial trajectory data while enforcing the Lorentz force law through the training loss.',
+          'The network was trained on time-state pairs and evaluated with a dual-objective loss that balances data fit and physics residuals. A classical RK4 integrator was then used to extend the predicted motion beyond the training window.',
+        ],
+      },
+      {
+        heading: 'Governing physics',
+        paragraphs: [
+          'The particle follows the Lorentz force law, m x¨ = q(E + x˙ × B), with the electric and magnetic fields defined by the project setup. This gives a physical residual that the network must satisfy in addition to matching the measured trajectory samples.',
+          'Because the dynamics are sensitive to the ratio q/m, the model learns these parameters as part of the training process rather than treating them as fixed constants.',
+        ],
+        pullQuote:
+          'The real value of the PINN is that it does not only fit the data — it also respects the underlying dynamics of the system.',
+      },
+      {
+        heading: 'Network design',
+        paragraphs: [
+          'The network accepts scalar time t as input and predicts the 4D state vector [v1, v2, x1, x2]. Tanh activations were used for smooth derivatives, which is especially important when computing physics residuals through automatic differentiation.',
+          'The total loss combines a data term and a residual term: λ_data · L_data + λ_physics · L_physics. This makes the optimization behave like a constrained fit rather than a pure black-box regression.',
+        ],
+        list: [
+          'Input: scalar time t',
+          'Output: [v1, v2, x1, x2]',
+          'Activation: Tanh for smooth auto-differentiation',
+          'Training: Adam with physics-aware loss weighting',
+        ],
+      },
+      {
+        heading: 'Methodology and results',
+        paragraphs: [
+          'The workflow began with preparing trajectory data, training the PINN, recovering the learned mass and charge estimates, and then using RK4 for stable long-horizon extrapolation. This separation of learning and integration improved the physical fidelity of the trajectory prediction.',
+          'The revised model achieved a final MSE of 1.18e-01 and reduced the error by roughly 10× relative to the earlier baseline. The result is a clear example of how physics-informed learning can improve both interpretability and extrapolation quality.',
+        ],
+        stats: [
+          { value: '1.18e-01', label: 'Final MSE' },
+          { value: '10×', label: 'Error reduction vs. baseline' },
+          { value: '5000', label: 'Training epochs' },
+          { value: '19.3%', label: 'Relative trajectory error' },
+        ],
+        tags: [
+          'Physics-informed neural networks',
+          'Lorentz force',
+          'RK4 integration',
+          'Parameter estimation',
+          'PyTorch',
+          'Scientific ML',
+          'Trajectory prediction',
+        ],
+      },
+    ],
+    prevSlug: 'motor-control',
     nextSlug: 'woodworking',
   },
   {
     slug: 'woodworking',
-    num: '04',
+    num: '06',
     type: 'Personal Projects',
     title: 'Woodworking — Furniture & Shop Fixtures',
     shortTitle: 'Woodworking',
+    image: '/Images/WoodenBench.jpg',
     summary:
       'Self-directed builds from furniture to custom fixtures — hand tools, joinery, and finishing where engineering precision meets craft.',
     tagline:
@@ -280,7 +415,7 @@ export const projects: Project[] = [
         ],
       },
     ],
-    prevSlug: 'buckconverter',
+    prevSlug: 'pinn',
   },
 ];
 

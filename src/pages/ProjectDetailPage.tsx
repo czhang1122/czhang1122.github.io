@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link as RouterLink, useParams, Navigate } from 'react-router-dom';
 import {
   Box,
@@ -16,6 +17,10 @@ import Footer from '../components/Footer';
 export default function ProjectDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const project = slug ? getProjectBySlug(slug) : undefined;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [slug]);
 
   if (!project) return <Navigate to="/" replace />;
 
