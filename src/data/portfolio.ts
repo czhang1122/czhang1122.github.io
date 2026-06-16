@@ -59,7 +59,7 @@ export const experienceCards = [
 
 export const experienceEntries = [
   {
-    company: 'Instron (ITW)',
+    company: 'Instron',
     location: 'Co-op · Norwood, MA',
     role: 'Applications Engineer Co-op',
     bullets: [
