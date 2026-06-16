@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef0f3"/>
+      <stop offset="100%" stop-color="#d9dde2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="100" y="120" width="1000" height="430" rx="24" fill="none" stroke="#bac1cb" stroke-width="16"/>
+  <path d="M280 520 L320 220 L520 240 L660 360 L860 340 L900 520" fill="none" stroke="#7d8a9a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M320 220 L400 180 L720 240" fill="none" stroke="#7d8a9a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M600 340 L760 260 L820 320" fill="none" stroke="#7d8a9a" stroke-width="18" stroke-linecap="round"/>
+  <text x="600" y="360" font-family="Space Mono, monospace" font-size="48" fill="#5d6773" text-anchor="middle">CAD / Exploded View</text>
+  <text x="600" y="420" font-family="Space Mono, monospace" font-size="30" fill="#5d6773" text-anchor="middle">Replace with SolidWorks export later</text>
+</svg>
