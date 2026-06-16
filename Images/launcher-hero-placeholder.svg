@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6f7f8"/>
+      <stop offset="100%" stop-color="#dae0e7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="80" y="80" width="1040" height="515" rx="24" fill="none" stroke="#c1c8d1" stroke-width="16"/>
+  <g stroke="#8b96a5" stroke-width="18" fill="none" stroke-linecap="round">
+    <path d="M280 500 H740 L820 420 L920 420 L980 380"/>
+    <path d="M740 500 L790 400"/>
+    <circle cx="310" cy="520" r="70"/>
+    <circle cx="930" cy="520" r="70"/>
+    <line x1="480" y1="260" x2="560" y2="220"/>
+    <line x1="560" y1="220" x2="700" y2="260"/>
+  </g>
+  <text x="600" y="360" font-family="Space Mono, monospace" font-size="50" fill="#64707a" text-anchor="middle">Launcher Hero</text>
+  <text x="600" y="420" font-family="Space Mono, monospace" font-size="30" fill="#64707a" text-anchor="middle">Add project photo here later</text>
+</svg>
