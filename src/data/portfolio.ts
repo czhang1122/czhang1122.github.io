@@ -36,10 +36,10 @@ export const skills = [
 ] as const;
 
 export const aboutParagraphs = [
-  "Hi! I'm Christopher Zhang, a mechatronics-focused mechanical engineer who recently completed my MS at Northeastern University (May 2026). I've designed, prototyped, and built hardware across contexts ranging from energy commissioning in the field to electromechanical systems on the bench.",
-  "My interests sit at the intersection of mechanisms, controls, and instrumentation. I'm drawn to problems where the physical and electrical worlds meet, and where the answer has to work in the real world, not just in simulation.",
-  "Previously, I co-op'd at Instron as an Applications Engineer and at ICO Energy & Engineering as a Commissioning Engineer, executing startup and acceptance testing of industrial energy systems in the field.",
-  'Outside engineering, I build things in wood. Furniture and shop fixtures demand the same precision as machined parts, just with hand tools and grain direction instead of tolerances and toolpaths.',
+  "Hi! I'm Christopher Zhang, a mechanical engineer who just completed my M.S. at Northeastern University with a mechatronics concentration. Over the past 5 years, I developed key engineering skills from my coursework, projects, and co-op experiences.",
+  "I enjoy building new things and understanding how they work. This passion for hands-on creation, and a strong science and math background, led me to pursue mechanical engineering. My project work reflects this drive, utilizing CAD, MATLAB, and even hand calculations and sketches to bring ideas to life.",
+  "My two co-ops were at Instron as an Applications Engineer and ICO Energy & Engineering as a Commissioning Engineer. At Instron, my mentor taught me to always ask why. The engineering journey is everlasting, and I look forward to future opportunities where I can continue to ask why.",
+  'Outside engineering, I enjoy lifting weights, going on runs, and playing ultimate frisbee for my school and summer club team. I recently got into woodworking and will feature my projects in this portfolio.',
 ];
 
 export const experienceCards = [
@@ -84,5 +84,5 @@ export const experienceEntries = [
 
 export const contactIntro = {
   heading: "Let's build something together.",
-  body: "I'm actively looking for full-time mechanical engineering roles in the Greater Boston area — particularly in medical devices, semiconductor equipment, defense/aerospace, and EV technology. If you're working on hardware that matters, I'd like to hear about it.",
+  body: "I'm actively looking for full-time mechanical engineering roles in the Greater Boston area in medical devices, semiconductor equipment, defense/aerospace, and EV technology. If you're working on hardware that matters, I'd like to hear about it.",
 };

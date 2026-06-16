@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef3f8"/>
+      <stop offset="100%" stop-color="#d3dce6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect x="100" y="120" width="1000" height="430" rx="24" fill="none" stroke="#aeb9c4" stroke-width="16"/>
+  <path d="M260 520 C 360 340 560 280 720 310 C 880 340 960 310 980 220" fill="none" stroke="#7b8590" stroke-width="18" stroke-linecap="round"/>
+  <path d="M440 320 L520 220 L640 250" fill="none" stroke="#7b8590" stroke-width="18" stroke-linecap="round"/>
+  <path d="M680 340 L760 270 L860 300" fill="none" stroke="#7b8590" stroke-width="18" stroke-linecap="round"/>
+  <text x="600" y="360" font-family="Space Mono, monospace" font-size="48" fill="#55606d" text-anchor="middle">System Diagram</text>
+  <text x="600" y="420" font-family="Space Mono, monospace" font-size="30" fill="#55606d" text-anchor="middle">Replace with CAD or block diagram later</text>
+</svg>
