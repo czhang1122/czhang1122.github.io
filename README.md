@@ -15,6 +15,7 @@ Open [http://localhost:5173](http://localhost:5173) to preview locally.
 
 ```bash
 npm run build
+npm run deploy
 npm run preview
 ```
 
